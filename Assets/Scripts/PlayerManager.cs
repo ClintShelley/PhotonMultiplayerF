@@ -11,8 +11,8 @@ namespace Com.MyCompany.MyGame
     /// Player manager.
     /// Handles fire Input and Beams.
     /// </summary>
-public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
-{
+    public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
+    {
         [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
         public static GameObject LocalPlayerInstance;
 
@@ -51,12 +51,12 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
         }
 
 #if UNITY_5_4_OR_NEWER
-public override void OnDisable()
-{
-    // Always call the base to remove callbacks
-    base.OnDisable ();
-    UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
-}
+        public override void OnDisable()
+        {
+            // Always call the base to remove callbacks
+            base.OnDisable();
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
 #endif
 
 
@@ -66,7 +66,7 @@ public override void OnDisable()
 
         [Tooltip("The Beams GameObject to control")]
         [SerializeField]
-        private GameObject beams;
+        //private GameObject beams;
         //True, when the user is firing
         bool IsFiring;
 
@@ -74,10 +74,10 @@ public override void OnDisable()
         public float Health = 1f;
 
 #if UNITY_5_4_OR_NEWER
-void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode loadingMode)
-{
-    this.CalledOnLevelWasLoaded(scene.buildIndex);
-}
+        void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode loadingMode)
+        {
+            this.CalledOnLevelWasLoaded(scene.buildIndex);
+        }
 #endif
         #endregion
 
@@ -109,14 +109,14 @@ void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneMan
         /// </summary>
         void Awake()
         {
-            if (beams == null)
-            {
-                Debug.LogError("<Color=Red><a>Missing</a></Color> Beams Reference.", this);
-            }
-            else
-            {
-                beams.SetActive(false);
-            }
+            //if (beams == null)
+            //{
+            //    Debug.LogError("<Color=Red><a>Missing</a></Color> Beams Reference.", this);
+            //}
+            //else
+            //{
+            //    beams.SetActive(false);
+            //}
 
             // #Important
             // used in GameManager.cs: we keep track of the localPlayer instance to prevent instantiation when levels are synchronized
@@ -140,7 +140,7 @@ void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneMan
 
 
 
-       void Start()
+        void Start()
         {
             CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
 
@@ -158,8 +158,8 @@ void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneMan
             }
 
 #if UNITY_5_4_OR_NEWER
-// Unity 5.4 has a new scene management. register a method to call CalledOnLevelWasLoaded.
-UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+            // Unity 5.4 has a new scene management. register a method to call CalledOnLevelWasLoaded.
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
 #endif
 
             if (PlayerUiPrefab != null)
@@ -193,10 +193,10 @@ UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
             }
 
             // trigger Beams active state
-            if (beams != null && IsFiring != beams.activeInHierarchy)
-            {
-                beams.SetActive(IsFiring);
-            }
+            //if (beams != null && IsFiring != beams.activeInHierarchy)
+            //{
+            //    beams.SetActive(IsFiring);
+            //}
 
             if (photonView.IsMine)
             {
