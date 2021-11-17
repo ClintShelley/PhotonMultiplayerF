@@ -566,11 +566,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3602518ed0245a34b978cac966152de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 7
+  distance: 5
   height: 3
-  centerOffset: {x: 0, y: 0, z: 0}
+  centerOffset: {x: 0, y: 2.4, z: 0}
   followOnStart: 0
-  smoothSpeed: 0.125
+  smoothSpeed: 5
 --- !u!114 &797461321075849901
 MonoBehaviour:
   m_ObjectHideFlags: 0

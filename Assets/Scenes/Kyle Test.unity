@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1205458040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1181573533, guid: 9ed598b68950e4340830ec9b87ac386e, type: 3}
-  m_PrefabInstance: {fileID: 6178985670601471268}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1207853302
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,14 +404,6 @@ PrefabInstance:
     - target: {fileID: 563036854192176519, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
       propertyPath: m_Name
       value: Big Vegas
-      objectReference: {fileID: 0}
-    - target: {fileID: 797461321075849901, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
-      propertyPath: beams
-      value: 
-      objectReference: {fileID: 1205458040}
-    - target: {fileID: 797461321075850576, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
-      propertyPath: sceneViewId
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 908495283869165373, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
       propertyPath: m_RootOrder
