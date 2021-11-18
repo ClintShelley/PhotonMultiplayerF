@@ -401,9 +401,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2632419323835364843, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
+      propertyPath: m_Size.y
+      value: 2.0347743
+      objectReference: {fileID: 0}
+    - target: {fileID: -2632419323835364843, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
+      propertyPath: m_Center.y
+      value: 1.1303864
+      objectReference: {fileID: 0}
+    - target: {fileID: -2632419323835364843, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c5881576458665e4eb49f9bcbb8f6066, type: 2}
     - target: {fileID: 563036854192176519, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
       propertyPath: m_Name
       value: Big Vegas
+      objectReference: {fileID: 0}
+    - target: {fileID: 797461321075850576, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
+      propertyPath: sceneViewId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 908495283869165373, guid: d2ce6c327d6dec844ae68625e45eb7ad, type: 3}
       propertyPath: m_RootOrder
