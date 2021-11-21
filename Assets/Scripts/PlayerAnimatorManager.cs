@@ -49,9 +49,12 @@ namespace Com.MyCompany.MyGame
 			// only allow jumping if we are running.
 			if (stateInfo.IsName("Base Layer.Run"))
 			{
-				// When using trigger parameter
-				//if (Input.GetButtonDown("Fire2")) animator.SetTrigger("Jump");
+				//When using trigger parameter
+                if (Input.GetKeyDown(KeyCode.Space)) animator.SetTrigger("Jump");
 			}
+
+			if (Input.GetKeyDown(KeyCode.Mouse0)) animator.SetTrigger("Punch");
+
 
 			// deal with movement
 			float h = Input.GetAxis("Horizontal");

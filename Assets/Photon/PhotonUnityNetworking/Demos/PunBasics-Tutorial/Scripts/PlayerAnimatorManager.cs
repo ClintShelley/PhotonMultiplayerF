@@ -57,7 +57,7 @@ namespace Photon.Pun.Demo.PunBasics
             if (stateInfo.IsName("Base Layer.Run"))
             {
 				// When using trigger parameter
-                if (Input.GetButtonDown("Fire2")) animator.SetTrigger("Jump"); 
+                if (Input.GetKeyDown(KeyCode.Space)) animator.SetTrigger("Jump"); 
 			}
            
 			// deal with movement

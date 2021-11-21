@@ -10,7 +10,6 @@
 
 
 using UnityEngine;
-using UnityEngine;
 using UnityEngine.EventSystems;
 
 using Photon.Pun;
